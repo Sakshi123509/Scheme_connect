@@ -178,9 +178,9 @@ const SchemeDetailPage = () => {
       <div className="min-h-screen bg-gray-50 pt-20">
 
         {/* Hero */}
-        <div className="relative h-[350px] flex items-center justify-center text-white overflow-hidden">
+        <div className="relative h-87.5 flex items-center justify-center text-white overflow-hidden">
           <img src={getSchemeImage()} alt={scheme.name} className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/40 to-black/60"></div>
 
           <div className="relative z-10 text-center max-w-5xl px-6">
             <span className="inline-block bg-green-500 text-white px-4 py-1 rounded-full text-sm mb-3 font-medium shadow-lg">
@@ -386,7 +386,7 @@ const SchemeDetailPage = () => {
 
                 {/* Apply Now → official portal */}
                 <button onClick={handleApply}
-                  className="w-full bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                  className="w-full bg-linear-to-r from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
                   Apply Now <ExternalLink size={20} />
                 </button>
 

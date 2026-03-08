@@ -145,7 +145,7 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Welcome Banner */}
-          <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
+          <div className="bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 opacity-5"><Award size={200} /></div>
             <div className="relative z-10">
               <h1 className="text-3xl font-bold mb-1">Welcome back, {user?.name?.split(" ")[0]}! 👋</h1>
@@ -220,7 +220,7 @@ const Dashboard = () => {
                           { icon: <Briefcase size={20} className="text-indigo-600" />, label: "Occupation", value: profile?.occupation, bg: "from-indigo-50 to-indigo-100" },
                           { icon: <MapPin size={20} className="text-teal-600" />, label: "Location", value: profile?.location && profile?.state ? `${profile.location}, ${profile.state}` : "N/A", bg: "from-teal-50 to-teal-100" },
                         ].map((item, i) => (
-                          <div key={i} className={`flex items-center gap-3 p-4 bg-gradient-to-r ${item.bg} rounded-lg`}>
+                          <div key={i} className={`flex items-center gap-3 p-4 bg-linear-to-r ${item.bg} rounded-lg`}>
                             {item.icon}
                             <div>
                               <p className="text-xs text-gray-500">{item.label}</p>
@@ -361,7 +361,7 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6">
+              <div className="bg-linear-to-br from-amber-50 to-orange-50 rounded-xl p-6">
                 <h3 className="font-bold text-gray-900 mb-4">Quick Actions</h3>
                 <div className="space-y-2.5">
                   <button onClick={() => navigate("/schemes")}

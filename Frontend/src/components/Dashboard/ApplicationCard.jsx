@@ -243,7 +243,7 @@ const AboutUs = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     {feature.icon}
                   </div>
                   <div>

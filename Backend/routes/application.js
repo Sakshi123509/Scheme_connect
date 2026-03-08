@@ -1,5 +1,5 @@
 import express from 'express';
-import Application from '../models/application.js';
+import Application from '../models/Application.js';
 import authMiddleware from '../middleware/authmiddleware.js';
 // import Application from '../models/application.js';
 

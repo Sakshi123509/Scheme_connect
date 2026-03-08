@@ -1,9 +1,11 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import cors from 'cors';
 import app from './app.js';
 
-// CORS sabse pehle - routes se pehle
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: process.env.CLIENT_URL || 'http://localhost:5173',
   credentials: true
 }));
 
@@ -14,4 +16,3 @@ app.listen(PORT, () => {
 });
 
 export default app;
-//need for running server.js directly with node command

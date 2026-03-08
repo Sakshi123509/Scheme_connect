@@ -76,8 +76,8 @@
 // export default api;
 import axios from "axios";
 
-// Backend ka URL
-const API_BASE_URL = "http://localhost:3000/api";
+// Backend ka URL (rendered)
+const API_BASE_URL = "https://scheme-connect-w48p.onrender.com/api";
 
 // Axios instance banao (default settings ke saath)
 const api = axios.create({

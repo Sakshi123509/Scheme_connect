@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { schemeAPI, applicationAPI } from "../services/api";
 import Navbar from "../components/Layout/Navbar";
-import pmayimg from "../assets/images/PMAY.png";
+import pmayimg from "../assets/images/pmay.png";
 import mudra from "../assets/images/mudra.jpg";
 import beti from "../assets/images/beti.jpg";
 import skill from "../assets/images/skill.webp";

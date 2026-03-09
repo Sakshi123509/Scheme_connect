@@ -1,7 +1,9 @@
-import Navbar from "../components/Layout/Navbar";
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import bgImage from '../assets/images/bg.jpg';
+import sideImage from '../assets/images/unnamed.jpg';
+import logoImage from '../assets/images/signup-logo.jpg';
 
 const inputClass =
   "w-full mb-4 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600";
@@ -65,21 +67,19 @@ export default function Signup() {
   return (
     <>
     <div className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
-     style={{ backgroundImage: "url('/src/assets/images/bg.jpg')" }}>
+   style={{ backgroundImage: `url(${bgImage})` }}>
       
         <div className="w-[880px] h-[550px] bg-white rounded-xl shadow-2xl flex overflow-hidden">
           {/* Left Image */}
           <div
             className="w-1/2 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/src/assets/images/unnamed.jpg')",
-            }}
+             style={{ backgroundImage: `url(${sideImage})` }}
           ></div>
 
           {/* Right Form */}
           <div className="w-1/2 p-10 flex flex-col justify-center">
             <img
-              src="/src/assets/images/signup-logo.jpg"
+              src={logoImage}
               alt="Signup"
               className="w-4/6 mx-auto mb-4"
             />

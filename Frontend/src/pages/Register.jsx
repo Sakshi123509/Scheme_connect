@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import bgImage from '../assets/images/bg.jpg';
-import sideImage from '../assets/images/unnamed.jpg';
-import logoImage from '../assets/images/signup-logo.jpg';
+import bgImage from "../assets/images/bg.jpg";
+import sideImage from "../assets/images/unnamed.jpg";
+import logoImage from "../assets/images/signup-logo.jpg";
 
 const inputClass =
   "w-full mb-4 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600";
@@ -50,11 +50,14 @@ export default function Signup() {
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/register", {
-        name: name.trim(),
-        email: email.toLowerCase(),
-        password,
-      });
+      const res = await axios.post(
+        "https://scheme-connect-w48p.onrender.com/api/auth/register",
+        {
+          name: name.trim(),
+          email: email.toLowerCase(),
+          password,
+        },
+      );
 
       alert("Registration successful! Please login.");
       navigate("/login");
@@ -66,23 +69,20 @@ export default function Signup() {
 
   return (
     <>
-    <div className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
-   style={{ backgroundImage: `url(${bgImage})` }}>
-      
+      <div
+        className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
         <div className="w-[880px] h-[550px] bg-white rounded-xl shadow-2xl flex overflow-hidden">
           {/* Left Image */}
           <div
             className="w-1/2 bg-cover bg-center"
-             style={{ backgroundImage: `url(${sideImage})` }}
+            style={{ backgroundImage: `url(${sideImage})` }}
           ></div>
 
           {/* Right Form */}
           <div className="w-1/2 p-10 flex flex-col justify-center">
-            <img
-              src={logoImage}
-              alt="Signup"
-              className="w-4/6 mx-auto mb-4"
-            />
+            <img src={logoImage} alt="Signup" className="w-4/6 mx-auto mb-4" />
 
             <h3 className="text-2xl font-bold text-center mb-6">
               CREATE YOUR ACCOUNT

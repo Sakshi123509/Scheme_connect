@@ -1,11 +1,9 @@
-import dotenv from "dotenv";
 import mongoose from "mongoose";
-
-dotenv.config();
 
 const connectdb = async () => {
     try {
-        const mongoURL = process.env.MONGO_URI || 'mongodb://localhost:27017/schemesathi';
+        const mongoURL = process.env.MONGO_URI;
+        console.log("MONGO_URI:", mongoURL ? "Found" : "NOT FOUND");
         await mongoose.connect(mongoURL);
         console.log("Connected to mongodb")
     } catch (err) {

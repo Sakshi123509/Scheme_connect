@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "698b7adac0c45c81a0870407"
+  },
+  "name": "Sakshi kadu",
+  "email": "23071135@ycce.in",
+  "password": "$2b$10$U7nLe3XdslZsTfXgW9mmvOSvNF1ktOSLFaTNRBBgJgXWKr3ld5XsS",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698e208c076dd47f5bb22b95"
+  },
+  "name": "Admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$ulhjRFggyLko1FyuIVpNnO705IrJodEQ12WXSSWpcj1u0g0rCY52e",
+  "role": "admin",
+  "__v": 0
+}]

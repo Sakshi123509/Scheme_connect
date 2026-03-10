@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "698b7affc0c45c81a0870418"
+  },
+  "user": {
+    "$oid": "698b7adac0c45c81a0870407"
+  },
+  "age": 21,
+  "income": 9200,
+  "category": "OBC",
+  "location": "Nagpur, Maharashtra, India",
+  "state": "Maharashtra",
+  "gender": "Female",
+  "occupation": "Student",
+  "createdAt": {
+    "$date": "2026-02-10T18:37:51.051Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-08T12:57:26.007Z"
+  },
+  "__v": 0
+}]

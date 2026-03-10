@@ -1,10 +1,8 @@
 import React from "react";
 import axios from "axios";
+import Navbar from "../components/Layout/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import bgImage from "../assets/images/bg.jpg";
-import loginImage from "../assets/images/loginimg.jpg";
-import logoImage from "../assets/images/logo.png";
 
 const inputClass =
   "w-full mb-4 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600";
@@ -21,13 +19,13 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "https://scheme-connect-w48p.onrender.com/api/auth/login",
+        "http://localhost:3000/api/auth/login",
         formData,
-      );
+      );  
+
       localStorage.setItem("token", res.data.token);
       navigate("/profile");
     } catch (err) {
-      console.error("Full error response:", err?.response?.data); // ← ADD THIS
       alert(err?.response?.data?.message || "Login failed");
     }
   };
@@ -35,19 +33,21 @@ export default function Login() {
   return (
     <>
       <div
-        className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat rounded-lg"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat rounded-lg "
+        style={{ backgroundImage: "url('/src/assets/images/bg.jpg') " }} // change image if needed
       >
         <div className="w-[780px] h-[450px] bg-white rounded-xl shadow-2xl flex overflow-hidden">
           <div
-            className="w-1/2 bg-cover object-cover"
-            style={{ backgroundImage: `url(${loginImage})` }}
+            className="w-1/2 bg-cover object-cover "
+            style={{
+              backgroundImage: "url('/src/assets/images/loginimg.jpg')",
+            }}
           ></div>
 
           <div className="w-1/2 p-10 flex flex-col justify-center">
             <div>
               <img
-                src={logoImage}
+                src="/src/assets/images/logo.png"
                 alt="Logo"
                 className="w-6 h-8 mx-auto object-contain"
               />
@@ -65,7 +65,7 @@ export default function Login() {
               onChange={handleChange}
               placeholder="Enter your email"
               className={inputClass}
-            />
+              />
 
             <input
               type="password"
@@ -73,21 +73,35 @@ export default function Login() {
               required
               value={formData.password}
               onChange={handleChange}
-              onKeyDown={(e) => e.key === "Enter" && handleLogin()}
               placeholder="********"
               className={inputClass}
             />
+
             <p className="text-right text-amber-600 text-sm mb-4 cursor-pointer hover:underline">
               Forgot password?
             </p>
 
+            {/* Login Button */}
             <button
               onClick={handleLogin}
-              className="bg-amber-700 text-white w-full py-3 rounded-md font-semibold transition-all duration-300 hover:bg-amber-600 hover:scale-[1.02] hover:shadow-lg"
+              className="
+            bg-amber-700 
+            text-white 
+            w-full 
+            py-3 
+            rounded-md 
+            font-semibold 
+            transition-all 
+            duration-300 
+            hover:bg-amber-600 
+            hover:scale-[1.02] 
+            hover:shadow-lg
+          "
             >
               Log In
             </button>
 
+            {/* Signup Link */}
             <p className="text-center text-sm mt-4">
               Don't have an account?{" "}
               <Link

@@ -1,4 +1,4 @@
-# 🇮🇳 SchemeConnect — Government Schemes Portal
+# SchemeConnect — Government Schemes Portal
 
 A unified platform to discover and apply for central & state government schemes based on your eligibility.
 

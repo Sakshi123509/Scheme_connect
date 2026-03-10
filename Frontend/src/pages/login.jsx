@@ -24,10 +24,10 @@ export default function Login() {
         "https://scheme-connect-w48p.onrender.com/api/auth/login",
         formData,
       );
-
       localStorage.setItem("token", res.data.token);
       navigate("/profile");
     } catch (err) {
+      console.error("Full error response:", err?.response?.data); // ← ADD THIS
       alert(err?.response?.data?.message || "Login failed");
     }
   };

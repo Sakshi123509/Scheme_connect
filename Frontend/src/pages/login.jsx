@@ -2,9 +2,9 @@ import React from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import bgImage from '../assets/images/bg.jpg';
-import loginImage from '../assets/images/loginimg.jpg';
-import logoImage from '../assets/images/logo.png';
+import bgImage from "../assets/images/bg.jpg";
+import loginImage from "../assets/images/loginimg.jpg";
+import logoImage from "../assets/images/logo.png";
 
 const inputClass =
   "w-full mb-4 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600";
@@ -23,7 +23,7 @@ export default function Login() {
       const res = await axios.post(
         "https://scheme-connect-w48p.onrender.com/api/auth/login",
         formData,
-      );  
+      );
 
       localStorage.setItem("token", res.data.token);
       navigate("/profile");
@@ -73,10 +73,10 @@ export default function Login() {
               required
               value={formData.password}
               onChange={handleChange}
+              onKeyDown={(e) => e.key === "Enter" && handleLogin()}
               placeholder="********"
               className={inputClass}
             />
-
             <p className="text-right text-amber-600 text-sm mb-4 cursor-pointer hover:underline">
               Forgot password?
             </p>
